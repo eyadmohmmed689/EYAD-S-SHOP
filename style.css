@@ -1,0 +1,244 @@
+h1{
+    text-align: center;
+    color: rgb(234, 12, 127);
+    font-size: 40px;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* وضع العناصر في الأسفل */
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 80px); /* تقليل حجم الخانات */
+    gap: 10px; /* مسافة بين الخانات */
+    margin-bottom: 20px; /* مسافة بين الخانات وأسفل الصفحة */
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* تقليل عرض الخانة */
+    height: 80px; /* تقليل ارتفاع الخانة */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* تصغير النص */
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #0056b3;
+}
+ img{
+    margin-top: 20px;
+ }
+
+
+ /* تطبيق الأنماط فقط على الصفحات الفرعية */
+body.sub-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: flex-start; /* لمحاذاة العنصر أفقياً */
+    align-items: flex-start; /* لمحاذاة العنصر عمودياً */
+}
+
+
+
+body.sub-page .button:hover {
+    background-color: #0056b3;
+}
+
+.button {
+    padding: 5px 10px; /* تصغير حجم الزر */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* تصغير حجم النص */
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px; /* إضافة مسافة حول الزر */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* إعدادات الصفحة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* تقسيم الخانات على 3 أعمدة */
+    gap: 20px; /* المسافة بين الخانات */
+    padding: 20px;
+}
+
+/* تنسيق الخانة الواحدة */
+.item {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* تأثير التحويم على الخانة */
+.item:hover {
+    transform: translateY(-5px);
+}
+
+/* تنسيق صورة المنتج */
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* لجعل الصورة متناسبة */
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* تنسيق السعر */
+.price {
+    font-weight: bold;
+    color: #27ae60;
+    margin: 10px 0;
+    display: block;
+}
+
+/* تنسيق الزر */
+button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* تأثير التحويم على الزر */
+button:hover {
+    background: #2980b9;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 800px; /* حجم ثابت */
+    margin: 0 auto; /* توسيط العنصر */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ /* Responsiveness  */
+ /*Mobile Devices*/
+ @media(max-width: 600px){
+    h1{
+        font-size: 20px;
+    }
+    .container{
+        grid-template-columns: repeat(3, 1fr); /* تقسيم الخانات على 3 أعمدة */
+        display: grid;
+    grid-template-columns: repeat(3, 80px); /* 3 أعمدة بحجم 80px لكل خانة */
+    column-gap: 2px; /* تقليل المسافة الأفقية بين الأعمدة */
+    row-gap: 10px; /* تقليل المسافة الرأسية بين الصفوف */
+
+        width: 200px;  /* أو أي حجم تريده */
+        height: 100px;
+      
+      
+    }
+    
+    .box{
+        gap: 5px; /* تقليل المسافة بين الأعمدة والصفوف */
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;  /* يأخذ عرض الحاوية */
+            height: 100%; /* يأخذ ارتفاع الحاوية */
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+ .rego{
+    width: 300px;
+
+}
+
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover; /* لجعل الصورة متناسبة */
+    margin-bottom: 10px;
+    border-radius: 4px;
+
+
+}
+.button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px; /* مسافة صغيرة من الحواف */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+}
